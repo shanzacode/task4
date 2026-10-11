@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Black Elegance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <svg class="girl-icon" viewBox="0 0 24 24">
+                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,13.88 19.35,15.61 18.26,17C17.3,15.22 14.8,14 12,14C9.2,14 6.7,15.22 5.74,17C4.65,15.61 4,13.88 4,12A8,8 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/>
+            </svg>
+            Black Elegance
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Black Collection</a>
+            <a href="index.html#about-us">About Us</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+    </header>
+
+    <div class="container" style="max-width: 400px; margin-top: 60px;">
+        <div style="background: #18181b; padding: 35px; border-radius: 12px; border: 1px solid #27272a;">
+            <h2 style="color: #f59e0b; margin-bottom: 20px; text-align: center;">Account Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 12px; margin-bottom: 5px; color: #a1a1aa;">Email Address</label>
+                    <input type="email" required style="width: 100%;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 12px; margin-bottom: 5px; color: #a1a1aa;">Password</label>
+                    <input type="password" required style="width: 100%;">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Login to Unlock All</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Black Elegance. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            localStorage.setItem('isLoggedIn', 'true');
+            alert('Login successful! You can now view all items.');
+            window.location.href = 'shop.html';
+        }
+    </script>
+</body>
+</html>

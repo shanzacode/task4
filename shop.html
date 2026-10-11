@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Black Collection - Black Elegance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <svg class="girl-icon" viewBox="0 0 24 24">
+                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,13.88 19.35,15.61 18.26,17C17.3,15.22 14.8,14 12,14C9.2,14 6.7,15.22 5.74,17C4.65,15.61 4,13.88 4,12A8,8 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/>
+            </svg>
+            Black Elegance
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Black Collection</a>
+            <a href="index.html#about-us">About Us</a>
+            <a href="login.html" id="nav-login-btn">Login</a>
+        </nav>
+        <div id="cart-badge" onclick="toggleCartModal()" style="background: #27272a; padding: 8px 16px; border-radius: 20px; font-size: 14px; cursor: pointer; color: #f59e0b;">
+            🛒 Bag (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <div id="category-filters">
+                <button class="filter-btn active" onclick="filterCategory('All', this)">All Black Dresses</button>
+                <button class="filter-btn" onclick="filterCategory('Formals', this)">Formals</button>
+                <button class="filter-btn" onclick="filterCategory('Casuals', this)">Casuals</button>
+            </div>
+            <input type="text" id="search-input" placeholder="Search dresses..." onkeyup="searchProducts()">
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+        <!-- Login Prompt Banner for Guest Users -->
+        <div id="login-banner" class="login-banner">
+            <h3>🔒 Want to see more exclusive black collection items?</h3>
+            <p style="color: #a1a1aa; margin: 10px 0;">Please login to unlock full catalog & place orders.</p>
+            <a href="login.html" class="btn-primary" style="display: inline-block; margin-top: 10px;">Login / Sign Up Now</a>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Shopping Bag 🛍️</h2>
+                <button onclick="toggleCartModal()" style="background: none; border: none; font-size: 20px; color: #fff; cursor: pointer;">✕</button>
+            </div>
+            <div id="cart-items-container"></div>
+            <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h3 id="cart-total-price" style="color: #f59e0b;">Total: Rs. 0</h3>
+                <button onclick="alert('Order Placed Successfully!')" class="btn-primary">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Black Elegance. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
