@@ -1,1 +1,21 @@
-# task4
+# Royal Shehnai Couture - Pakistani Wedding E-Commerce Boutique
+
+Royal Shehnai Couture is a premium, responsive front-end web application designed for a traditional Pakistani wedding boutique. It showcases regal Barat lehengas, vibrant Mehndi outfits, handcrafted bridal khussas, and traditional Kundan jewelry sets.
+
+## 🚀 Features & Interactions
+- **Dual-Page Layout:** Clean separation between the Home landing page (`index.html`) and the interactive Shop catalog (`shop.html`).
+- **Image Hover Transition:** Dynamic swapping between primary and secondary product shots on mouse hover.
+- **Category Filtering & Live Search:** Instant filtering by categories (Barat, Mehndi, Shoes, Jewelry) and real-time search bar lookup.
+- **Shopping Bag Counter & Toast Notifications:** Interactive cart updating with instant feedback alerts.
+- **Client-Side Validation:** Form validation for newsletter subscriptions.
+- **Modular Architecture:** Separated concerns using clean HTML5, custom CSS3 styling (`style.css`), and a dedicated JavaScript file (`script.js`).
+
+## 🛠️ Technologies Used
+- **HTML5**
+- **CSS3 (Flexbox, Grid, Responsive Media Queries)**
+- **JavaScript (ES6 DOM Manipulation)**
+
+## 📦 Setup & Execution
+1. Create a folder on your computer.
+2. Save all four files (`index.html`, `shop.html`, `style.css`, and `script.js`) inside that same folder.
+3. Open `index.html` in any web browser to run and test the application.
